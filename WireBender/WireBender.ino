@@ -75,7 +75,9 @@ void loop() {
   if (mode.startsWith("manual")) {
     manual();
   }
-/*  if (mode.startsWith("star")) {
+/*  
+ *   Reimplement this as an array of commands
+ *   if (mode.startsWith("star")) {
     star();
   }
   if (mode.startsWith("cube")) {
@@ -93,9 +95,9 @@ void manual() {
   int angle;
   int angleConst;
   Serial.println("# Entering Manual Mode");
-  Serial.println("# f### | Feed Length 📏|  mm | f123");
-  Serial.println("# x### | X Angle 📐    | deg | x-120");
-  Serial.println("# z### | Z Angle 📐    | deg | z-90");
+  Serial.println("# f### | Y Feed  📏 |  mm | f123");
+  Serial.println("# x### | X Angle 📐 | deg | x-120");
+  Serial.println("# z### | Z Angle 📐 | deg | z-90");
   while (!dataIn.startsWith("end")) {
     servo01.write(130);
     delay(200);
