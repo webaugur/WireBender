@@ -219,7 +219,7 @@ void manual() {
       angleConst = 16;
 
       // Move to "negative" bending initial position
-      move_bender(-43 * angleConst, -1200);
+      if(sign == 1) move_bender(-43 * angleConst, -1200);
 
       // Bend Wire
       set_pin_up();
