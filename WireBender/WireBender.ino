@@ -239,7 +239,7 @@ void manual() {
     if (dataIn.startsWith("c")) {
       if (dataIn.charAt(1) == '-') {
         angle = parse_field_value(dataIn);
-        print_user_msg(3,"Bend B-Axis 📐 ", angle, " degrees.");
+        print_user_msg(3,"Bend C-Axis 📐 ", angle, " degrees.");
         angleConst = 16;
         while (zAxisStepper.currentPosition() != angle * angleConst) {
           zAxisStepper.setSpeed(500);
@@ -250,7 +250,7 @@ void manual() {
       }
       else {
         angle = parse_field_value(dataIn);
-        print_user_msg(3,"Bend B-Axis 📐 ", angle, " degrees.");
+        print_user_msg(3,"Bend C-Axis 📐 ", angle, " degrees.");
         angleConst = 16;
         while (zAxisStepper.currentPosition() != (-1) *angle * angleConst) {
           zAxisStepper.setSpeed(-500);
